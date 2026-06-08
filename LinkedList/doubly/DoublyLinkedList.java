@@ -54,3 +54,26 @@ public class DLL {
         newNode.prev = curr;
         last = newNode;
     }
+     public void printList() {
+        Node currhead = head;
+        while (currhead != null) {
+            last = currhead;
+            System.out.print(currhead.val + " -- > ");
+            currhead = currhead.next;
+        }
+
+        System.out.println(" End ");
+
+    }
+
+    public void printListRev() {
+        Node node = last;
+        while (node != null) {
+            System.out.print(node.val + "- - >");
+
+            node = node.prev;
+
+        }
+        System.out.print(" Start ");
+
+    }
