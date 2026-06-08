@@ -77,3 +77,44 @@ public class DLL {
         System.out.print(" Start ");
 
     }
+     public void deleteFirst() {
+        if (head == null) {
+
+            System.out.print("the list is empty");
+            return;
+        }
+        if (head.next == null) {
+
+            head = null;
+
+            return;
+
+        }
+        head = head.next;
+        head.prev = null;
+    }
+
+    public void deleteLast() {
+        if (head == null) {
+
+            System.out.print("the list is empty");
+            return;
+        }
+        if (head.next == null) {
+
+            head = null;
+
+            return;
+
+        }
+        Node last = head.next;
+        Node secondlast = head;
+
+        while (last.next != null) {
+            last = last.next;
+            secondlast = secondlast.next;
+        }
+        last.prev = null;
+        secondlast.next = null;
+
+    }
