@@ -35,3 +35,22 @@ public class DLL {
         head = newNode;
 
     }
+     public void addLast(int val) {
+        Node newNode = new Node(val);
+        Node curr = head;
+        newNode.next = null;
+        if (head == null) {
+            head = newNode;
+            return;
+        }
+
+        while (curr.next != null) {
+
+            curr = curr.next;
+
+        }
+
+        curr.next = newNode;
+        newNode.prev = curr;
+        last = newNode;
+    }
