@@ -118,3 +118,23 @@ public class DLL {
         secondlast.next = null;
 
     }
+       public static void main(String args[]) {
+        DLL list = new DLL();
+        list.addFirst(10);
+        list.addFirst(20);
+        list.addFirst(30);
+        list.addLast(100);
+
+        list.printList();
+        list.deleteLast();
+        list.printList();
+        list.deleteLast();
+        list.printList();
+        list.deleteLast();
+        list.printList();
+        list.deleteLast();
+        list.printList();
+        list.deleteLast();
+        list.printList();
+    }
+}
