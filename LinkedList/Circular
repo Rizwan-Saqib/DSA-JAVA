@@ -14,3 +14,17 @@ class CSLL {
         }
 
     }
+public void insert(int val) {
+        Node node = new Node(val);
+        if (head == null) {
+
+            head = node;
+            tail = node;
+            tail.next = head;
+            return;
+        }
+        tail.next = node;
+        node.next = head;
+        tail = node;
+
+    }
