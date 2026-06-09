@@ -71,6 +71,15 @@ node = node.next;
 
 
 
-
+}
+   public static void main(String args[]) {
+        CSLL list = new CSLL();
+        list.insert(3);
+  list.insert(30);
+    list.insert(333);
+        list.display();
+        list.delete(30);
+        list.display();
+    }
 
 }
