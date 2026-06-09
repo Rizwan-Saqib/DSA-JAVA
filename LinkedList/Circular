@@ -28,3 +28,16 @@ public void insert(int val) {
         tail = node;
 
     }
+ public void display() {
+        Node currhead = head;
+
+        if (head != null) {
+            do {
+                System.out.print(currhead.val + " --> ");
+                currhead = currhead.next;
+
+            } while (currhead != head);
+
+        }
+
+    }
