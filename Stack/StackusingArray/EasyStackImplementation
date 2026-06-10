@@ -56,9 +56,6 @@ st.push(15);
 System.out.println(st.peek());
 
 System.out.println(st.pop());
-
-
     }
-
 }
 
