@@ -48,14 +48,5 @@ return arr[index];
     
     public static void main(String args[]){
 
-CustomEasyStack st = new CustomEasyStack(5);
-st.push(5);
-st.push(10);
-st.push(15);
 
-System.out.println(st.peek());
-
-System.out.println(st.pop());
-    }
-}
 
