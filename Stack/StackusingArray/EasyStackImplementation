@@ -1,5 +1,10 @@
 
+class CustomEasyStack{
 
+int[] arr;
+int index;
+int capacity;
+CustomEasyStack(int size){
 
 arr = new int[size];    
 capacity = size;
