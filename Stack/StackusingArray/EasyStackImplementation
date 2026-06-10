@@ -1,1 +1,64 @@
 
+class CustomEasyStack{
+
+int[] arr;
+int index;
+int capacity;
+CustomEasyStack(int size){
+
+arr = new int[size];    
+capacity = size;
+index = -1;
+}
+public void push(int val){
+
+if(index == capacity-1){
+    System.out.println("Stack overflow");
+    return;
+}
+index++;
+arr[index] = val;
+
+}
+int pop(){
+
+if(index == -1){
+
+    System.out.println("Stack under flow");
+    return -1;
+}
+int val = arr[index];
+index--;
+return val;
+
+}
+public int peek(){
+if(index == -1){
+
+    System.out.println("Stack is empty bro");
+    return -1;
+}
+return arr[index];
+
+}
+  /* boolean isEmpty() {
+        return index == -1;
+    }
+         */
+    
+    public static void main(String args[]){
+
+CustomEasyStack st = new CustomEasyStack(5);
+st.push(5);
+st.push(10);
+st.push(15);
+
+System.out.println(st.peek());
+
+System.out.println(st.pop());
+
+
+    }
+
+}
+
