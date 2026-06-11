@@ -1,4 +1,9 @@
 
+class StackException extends Exception{
+ 
+public StackException(String message){
+super( message);
+}
 }
 public class CustomStack{
 protected int[] arr;
