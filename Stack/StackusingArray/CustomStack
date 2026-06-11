@@ -1,1 +1,53 @@
 
+}
+public class CustomStack{
+protected int[] arr;
+private static final int DEFAULT_SIZE = 5;
+int index ; 
+int cap;
+//int size;
+CustomStack(){
+this(DEFAULT_SIZE);
+
+}
+public CustomStack(int size){
+this.arr = new int[size]; 
+ index = -1;
+cap = size;
+}
+public boolean push(int val) {
+if(isFull()){
+System.out.println(" Stack is already full !!");
+return false;
+}
+index ++;
+arr[index]=val;
+return true;
+}
+
+public int pop()throws StackException{
+    
+if(isEmpty()){
+throw new StackException("Stack underflow ");
+}
+//System.out.println("Pushed. Index: " + index + ", Cap: " + cap  );
+return arr[index--];
+}
+
+public int peek()throws StackException{
+if(isEmpty()){
+throw new StackException(" Stack is empty");
+}
+return arr[index];
+}
+public boolean isFull(){
+
+    return index  == cap-1;
+}
+public boolean isEmpty(){
+
+return index == -1;
+}
+
+
+}
