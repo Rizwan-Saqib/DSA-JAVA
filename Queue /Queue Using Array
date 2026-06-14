@@ -1,1 +1,87 @@
+class QueueException extends Exception{
+   public QueueException(String message){
 
+       super(message);
+    }
+
+
+}
+public class CustomQueue {
+
+    private static final int  DEFAULTSIZE = 5;
+    protected int [] arr;
+    int index;
+    int cap;
+     CustomQueue(int size ){
+
+        this.arr = new int[size];
+        index = -1;
+        cap = size;
+     }
+     CustomQueue(){
+
+this(DEFAULTSIZE);
+
+     }
+    public boolean isFull(){
+        return index == cap -1;
+
+    }
+    public boolean isEmpty(){
+
+
+        return index == -1;
+    }
+    
+    public boolean  insert(int val){
+        if(isFull()){
+
+
+            return false;
+        }
+      
+        arr[++index] = val;
+
+return true;
+    }
+    public int delete ()throws QueueException{
+        if(isEmpty()){
+            throw new QueueException("stack underflow ");
+
+        }
+int del = arr[0];
+for(int i  = 0 ; i < index;i++){
+arr[i] = arr[i+1];
+
+}
+index--;
+
+
+return del;
+
+
+    }
+    public int front(){
+
+        return arr[0];
+    }
+    public void display(){
+for (int i = 0; i <= index; i++) {
+    System.out.println(arr[i]);
+}
+
+
+    }
+    public static void main(String args[])throws QueueException{
+
+      CustomQueue q = new CustomQueue(5);
+      q.insert(1) ;
+      q.insert(2) ;
+      q.insert(3) ;
+      q.insert(4) ;
+    
+System.out.println(q.front());
+q.display();
+
+    }
+}
