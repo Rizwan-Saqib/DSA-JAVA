@@ -3,8 +3,6 @@ class QueueException extends Exception{
 
        super(message);
     }
-
-
 }
 public class CustomQueue {
 
