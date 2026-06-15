@@ -1,0 +1,70 @@
+
+class CircularQueue{
+ int[]arr;
+ private static final int defaultsize= 5;
+ int front,end;
+ int cap;
+ int size;
+ CircularQueue(int size){
+    arr = new int[size];
+    front = 0 ;
+    end=0;
+    this.size = 0;
+    }
+    CircularQueue(){
+    this(defaultsize);
+    
+    }
+    
+public boolean isFull(){
+
+return arr.length ==size ;
+}
+public boolean  isEmpty(){
+
+return size == 0;
+}
+public boolean insert(int val){
+if(isFull()){
+return false;
+}
+arr[end++]= val;
+end = end%arr.length;
+size++;
+return true;
+}
+class  CustomException extends Exception{
+public CustomException(String message){
+super(message);
+}
+
+}
+public int remove()throws CustomException{
+if(isEmpty()){
+throw new CustomException("the stack is emty");
+
+}
+int removed = arr[front++];
+front = front%arr.length;
+size--;
+return removed;
+}
+public void Display(){
+for(int i = front ; i < end;i++){
+System.out.println(arr[i]);
+
+
+}
+
+}
+
+public static void main(String args[])throws CustomException{
+CircularQueue queue = new CircularQueue();
+queue.insert(5);
+queue.insert(10);
+queue.insert(15);
+queue.Display();
+System.out.println(queue.remove());
+System.out.println(queue.remove());
+}
+}
