@@ -68,3 +68,6 @@ System.out.println(queue.remove());
 System.out.println(queue.remove());
 }
 }
+// for my own uderstainf the things that make me confysed -- > the size varaiable like we have one size variavle and we are using it at two dofferent places ad leeting to to do two dofferent operatins
+//actally there are two sizes in the code one is the arr.length  we can say it is a permanent because in cicular queue we cant change the size we cant oveflow the queue when we reach the limit we simpley override the  element at first  index 
+//and of we talk about the actaual size variable it is initially zero and eith theaddition and removal of elmets it was increasing and deceasing 
